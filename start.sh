@@ -4,7 +4,7 @@ set -e
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "Starting MySQL..."
-sudo service mysql start
+sudo service mariadb start
 
 echo "Waiting for MySQL to be ready..."
 until mysqladmin ping -uroot -pinterview --silent 2>/dev/null; do

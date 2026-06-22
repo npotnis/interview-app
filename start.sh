@@ -2,7 +2,8 @@
 set -e
 
 echo "Waiting for MySQL to be ready..."
-until docker compose exec -T db mysqladmin ping -uroot -pinterview --silent 2>/dev/null; do
+until (echo > /dev/tcp/db/3306) 2>/dev/null; do
+  echo "  still waiting..."
   sleep 2
 done
 echo "MySQL is ready."

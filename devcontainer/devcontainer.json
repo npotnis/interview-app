@@ -2,10 +2,6 @@
   "name": "ShopBoard Interview",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "features": {
-    "ghcr.io/devcontainers/features/mysql:1": {
-      "version": "8.0",
-      "rootPassword": "interview"
-    },
     "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
   },
   "forwardPorts": [3000, 5173, 3306],
@@ -14,7 +10,7 @@
     "5173": { "label": "Frontend", "onAutoForward": "openBrowser" },
     "3306": { "label": "MySQL",    "onAutoForward": "silent" }
   },
-  "postCreateCommand": "cd backend && npm install && cd ../frontend && npm install && cd /workspace && cp backend/.env.example backend/.env && mysql -uroot -pinterview < db/schema.sql",
+  "postCreateCommand": "bash devcontainer/setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [

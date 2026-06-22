@@ -1,0 +1,15 @@
+{
+  "name": "interview-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "seed": "node db/seed.js",
+    "dev:api": "cd backend && npm run dev",
+    "dev:ui": "cd frontend && npm run dev"
+  },
+  "dependencies": {
+    "mysql2": "^3.9.7",
+    "dotenv": "^16.4.5"
+  }
+}

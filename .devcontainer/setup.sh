@@ -22,6 +22,6 @@ cd backend && npm install
 cd ../frontend && npm install
 
 echo "[4/4] Setting up environment..."
-cp backend/.env.example backend/.env
+cp -n backend/.env.example backend/.env
 
 echo "Setup complete. Run: bash start.sh"

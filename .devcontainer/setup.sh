@@ -23,6 +23,7 @@ mariadb_exec "ALTER USER 'root'@'localhost' IDENTIFIED BY 'interview'; FLUSH PRI
 sudo mariadb -uroot -pinterview shopdb < "$ROOT/db/schema.sql"
 
 echo "[3/4] Installing dependencies..."
+(cd "$ROOT"          && npm install)
 (cd "$ROOT/backend"  && npm install)
 (cd "$ROOT/frontend" && npm install)
 

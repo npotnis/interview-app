@@ -3,11 +3,7 @@ set -e
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-echo "[1/4] Installing MariaDB..."
-sudo apt-get update -q
-DEBIAN_FRONTEND=noninteractive sudo apt-get install -y mariadb-server
-
-echo "[2/4] Configuring MariaDB..."
+echo "[1/4] Configuring MariaDB..."
 sudo service mariadb start || true
 
 # Try each auth method in order: already-configured password, debian

@@ -1,6 +1,6 @@
 {
   "name": "ShopBoard Interview",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "build": { "dockerfile": "Dockerfile" },
   "features": {
     "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
   },
